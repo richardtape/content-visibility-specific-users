@@ -2,7 +2,6 @@ import { PanelBody, PanelRow } from '@wordpress/components';
 import { withInstanceId } from '@wordpress/compose';
 import { __ } from '@wordpress/i18n';
 
-// This...hmmmmm...
 import { ContentVisibilitySpecificUsersMultiSelect } from '../controls/content-visibility-specific-users-multiselect';
 
 /**

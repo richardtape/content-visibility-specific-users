@@ -1234,11 +1234,12 @@ var ContentVisibilitySpecificUsersMultiSelect = Object(_wordpress_compose__WEBPA
     });
   };
 
+  var msVal = props.attributes.contentVisibilityRules.specificusers ? props.attributes.contentVisibilityRules.specificusers[type] : option;
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
     className: "content-visibility-multi-select"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(react_multi_select_component__WEBPACK_IMPORTED_MODULE_2__["default"], {
     options: data,
-    value: props.attributes.contentVisibilityRules.specificusers[type] || option,
+    value: msVal,
     onChange: onChange,
     labelledBy: labelledBy,
     ItemRenderer: function ItemRenderer(_ref2) {
@@ -1283,7 +1284,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // This...hmmmmm...
 
 
 /**

@@ -4,6 +4,8 @@ import { __ } from '@wordpress/i18n';
 
 import { ContentVisibilitySpecificUsersMultiSelect } from '../controls/content-visibility-specific-users-multiselect';
 
+import hasRules from '../helpers/has-rules';
+
 /**
  * PHP sends through a list of all the users on the site. We massage that data to be
  * usable by our Dropdown.
@@ -39,11 +41,13 @@ function ContentVisibilitySpecificUsersBodyControl( { instanceId, props } ) {
     const data = getUsers();
     const type = 'specificusers';
 
+    let hasRulesClass = ( hasRules( props, type ) ) ? ' has-active-rules' : '';
+
     return (
         <PanelBody
             title={ __( 'Specific Users', 'content-visibility-specific-users' ) }
             initialOpen={ false }
-            className="content-visibility-control-panel content-visibility-specific-users-controls"
+            className={"content-visibility-control-panel content-visibility-specific-users-controls" + hasRulesClass }
         >
             <PanelRow>
                 <ContentVisibilitySpecificUsersMultiSelect data={ data } labelledBy="Select Specific Users" props={ props } type={ type } />

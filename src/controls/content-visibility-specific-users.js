@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 import { registerPlugin } from '@wordpress/plugins';
 import { addFilter } from '@wordpress/hooks';
 
-import ContentVisibilityGeolocationPanelBodyControl from './content-visibility-specific-users-panel-body';
+import ContentVisibilitySpecificUsersBodyControl from './content-visibility-specific-users-panel-body';
 
 export function ContentVisibilitySpecificUsersControl( data ) {
 
@@ -14,12 +14,12 @@ export function ContentVisibilitySpecificUsersControl( data ) {
 
     if ( ! rulesEnabled || ! contentVisibility ) {
         return (
-            <Disabled><ContentVisibilityGeolocationPanelBodyControl props={ props } /></Disabled>
+            <Disabled><ContentVisibilitySpecificUsersBodyControl props={ props } /></Disabled>
         );
     }
 
     return (
-        <ContentVisibilityGeolocationPanelBodyControl props={ props } />
+        <ContentVisibilitySpecificUsersBodyControl props={ props } />
     );
 
 }

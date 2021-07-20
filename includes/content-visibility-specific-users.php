@@ -84,11 +84,6 @@ function rule_logic_specificusers( $rule_value, $block_visibility, $block ) {
 		return true;
 	}
 
-	// Need a user to be logged in.
-	if ( ! is_user_logged_in() ) {
-		return true;
-	}
-
 	// Check we have relevant data to check - i.e. we have some user IDs to check.
 	if ( ! isset( $rule_value['specificusers'] ) || empty( $rule_value['specificusers'] ) ) {
 		return true;
@@ -98,6 +93,11 @@ function rule_logic_specificusers( $rule_value, $block_visibility, $block ) {
 
 	if ( ! is_array( $user_ids ) || empty( $user_ids ) ) {
 		return true;
+	}
+
+	// Some users are selected and the user isn't signed in. Need a user to be logged in.
+	if ( ! is_user_logged_in() ) {
+		return false;
 	}
 
 	// OK, this block is set to only be shown/hidden to some user IDs. Compare that to the current

@@ -28,13 +28,11 @@ export const ContentVisibilitySpecificUsersMultiSelect = withState( {
 
     };
 
-    let msVal = ( props.attributes.contentVisibilityRules.specificusers ) ? props.attributes.contentVisibilityRules.specificusers[type] : option;
-
     return (
         <div className="content-visibility-multi-select">
             <MultiSelect
                 options={ data }
-                value={ msVal }
+                value={ props.attributes.contentVisibilityRules.specificusers[type] || option }
                 onChange={ onChange }
                 labelledBy={ labelledBy }
                 ItemRenderer={ ( { checked, option, onClick, disabled, } ) => {

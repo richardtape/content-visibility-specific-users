@@ -3,8 +3,8 @@ Contributors: iamfriendly
 Donate link: https://girlswhocode.com/
 Tags: contentvisibility, block, content, visibility, user, users
 Requires at least: 5.0
-Tested up to: 5.8.0
-Stable tag: 0.1.0
+Tested up to: 6.1.1
+Stable tag: 0.1.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,10 @@ Let me know: [https://github.com/richardtape/content-visibility-specific-users/i
 1. Showing the content visibility specific users controls in the content editor sidebar
 
 == Changelog ==
+
+= 0.1.1 =
+* WP 6.1.1 compatibility.
+* Fixed warning on Widgets screen.
 
 = 0.1.0 =
 * First public release.

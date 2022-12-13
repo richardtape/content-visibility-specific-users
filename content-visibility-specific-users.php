@@ -11,7 +11,7 @@
  * Plugin Name: Content Visibility Specific Users
  * Plugin URI:  https://richardtape.com/content-visibility/
  * Description: [Content Visibility Add-On] Show or hide your blocks to specific users.
- * Version:     0.1.0
+ * Version:     0.1.1
  * Author:      Richard Tape
  * Author URI:  https://richardtape.com
  * Text Domain: content-visibility-specific-users

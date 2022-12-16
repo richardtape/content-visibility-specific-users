@@ -1,4 +1,4 @@
-import MultiSelect from "react-multi-select-component";
+import { MultiSelect } from "react-multi-select-component";
 import { withState } from '@wordpress/compose';
 
 export const ContentVisibilitySpecificUsersMultiSelect = withState( {
@@ -28,11 +28,13 @@ export const ContentVisibilitySpecificUsersMultiSelect = withState( {
 
     };
 
+    let assumedValue = ( props.attributes.contentVisibilityRules.specificusers && props.attributes.contentVisibilityRules.specificusers[type] ) ? props.attributes.contentVisibilityRules.specificusers[type] : option;
+
     return (
         <div className="content-visibility-multi-select">
             <MultiSelect
                 options={ data }
-                value={ props.attributes.contentVisibilityRules.specificusers[type] || option }
+                value={ assumedValue }
                 onChange={ onChange }
                 labelledBy={ labelledBy }
                 ItemRenderer={ ( { checked, option, onClick, disabled, } ) => {
